@@ -1,0 +1,25 @@
+.card {
+    position: relative;
+    border: 0;
+    height: 350px;
+    width: 250px;
+    .card-img-top {
+        border-radius: 25px;
+        object-fit: cover;
+        background: rgba(0, 0, 0, 0.6)
+    }
+    .card-img-top:hover {
+        opacity: 0.6;
+    }
+    .card-name {
+        font-weight: bolder;
+        font-size: 20px;
+        color: white;
+        left: 0;
+        position: absolute;
+        text-align: center;
+        align-items: center;
+        margin-top: 170px;
+        width: 100%
+    }
+}
