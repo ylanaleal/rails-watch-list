@@ -6,6 +6,6 @@
 
   <div class="form-buttons mb-5">
     <%= f.submit "Add movie", class: "btn btn-outline-dark" %>
-    <button type="button" class="btn btn-outline-dark" data-bs-dismiss="form">Back</button>
+    <%= link_to "Back", lists_path, class: "btn btn-outline-dark" %>
   </div>
 <% end %>

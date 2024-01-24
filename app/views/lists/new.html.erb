@@ -1,5 +1,13 @@
-<h3>Create a new list</h3>
-<%= simple_form_for(@list) do |f| %>
-  <%= f.input :name, placeholder: 'Drama' %>
-  <%= f.submit class: 'btn btn-flat' %>
-<% end %>
+<div class="container new d-flex justify-content-center align-items-center my-auto">
+  <div class="row">
+    <div class="col-12 my-auto">
+      <div class="bg-white rounded p-3 shadow">
+        <h3 class="fw-bolder d-flex justify-content-center">Create a new list</h3>
+        <%= simple_form_for @list do |f| %>
+          <%= f.input :name, placeholder: 'movies to laugh my brains out' %>
+          <%= f.submit class: 'btn btn-outline-dark' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
