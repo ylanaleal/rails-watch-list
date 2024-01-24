@@ -1,4 +1,5 @@
 <div class="container">
+  <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
 
   <div class="position-relative">
     <div class="card-category card-large" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)) %>)">

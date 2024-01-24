@@ -5,6 +5,7 @@
         <h3 class="fw-bolder d-flex justify-content-center">Create a new list</h3>
         <%= simple_form_for @list do |f| %>
           <%= f.input :name, placeholder: 'movies to laugh my brains out' %>
+          <%= f.input :photo, as: :file %>
           <%= f.submit class: 'btn btn-outline-dark' %>
         <% end %>
       </div>
