@@ -43,7 +43,8 @@
       <% @lists.each do |list| %>
         <div class="col-sm-3 p-0">
           <div class="card d-flex flex-row m-3">
-              <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
+            <% if list.photo %>
+              <%= cl_image_tag list.photo.key, height: 300, width: 400, crop: :fill %>
 
               <%= link_to list_path(list), class:"text-decoration-none card-name" do %>
                 <%= list.name %>

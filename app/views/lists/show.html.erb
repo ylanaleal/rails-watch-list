@@ -11,7 +11,7 @@
     <span class="movie-tag"><%= pluralize(@list.movies.size, "movie") %></span>
 
       <div>
-        <%= link_to "delete this list", list_path(@list), class: "btn btn-outline-dark mt-1", data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this list?" } %>
+        <%= button_to "delete this list", list_path(@list), method: :delete, class: "btn btn-outline-dark mt-1", data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this list?" } %>
       </div>
     </div>
   </div>
@@ -35,7 +35,7 @@
                 <div>
                   <i class="fas fa-quote-left me-2"></i><small class="flex-grow-1"><%= bookmark.comment %></small>
                 </div>
-                <small class="text-right flex-shrink-0"><%= link_to "delete", bookmark_path(bookmark), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove #{movie.title} from your #{@list.name} list"}, class: 'text-danger' %></small>
+                <small class="text-right flex-shrink-0"><%= button_to "delete", bookmark_path(bookmark), method: :delete, data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove #{movie.title} from your #{@list.name} list"}, class: 'text-danger' %></small>
               </div>
             </div>
           </div>
