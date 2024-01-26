@@ -32,20 +32,16 @@
 </div>
 
 
-
-
 <div class="container">
-  <div class="row my-3 mx-auto">
+  <div class="row my-3 mx-auto px-auto">
     <%= link_to "Create a movie list", new_list_path, class: "btn btn-outline-dark my-1 mx-auto" %>
     <h2 class="mt-3">My Lists</h2>
       <% @lists.each do |list| %>
-        <div class="col-sm-3 p-0">
-          <div class="card d-flex flex-row m-3">
-              <%= cl_image_tag list.photo.key, height: 300, width: 400, crop: :fill %>
-
-              <%= link_to list_path(list), class:"text-decoration-none card-name" do %>
-                <%= list.name %>
-              <% end %>
+        <div class="col-sm-4 p-0">
+          <div class="card card-img d-flex flex-row my-2 mx-auto" style="background-image: url('<%= list.photo.attached? ? cl_image_path(list.photo.key) : 'https://www.tasteofcinema.com/wp-content/uploads/2014/11/Taxi-Driver.jpg' %>'); background-size: cover;">
+            <%= link_to list_path(list), class:"text-decoration-none card-name" do %>
+              <%= list.name %>
+            <% end %>
           </div>
         </div>
       <% end %>

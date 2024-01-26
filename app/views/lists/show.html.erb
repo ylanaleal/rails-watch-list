@@ -1,9 +1,14 @@
+<% if @list.photo.attached? %>
+  <%= cl_image_tag @list.photo.key, crop: :fill, class:"list-image" %>
+<% else %>
+    <%= image_tag 'https://www.tasteofcinema.com/wp-content/uploads/2014/11/Taxi-Driver.jpg', class:"list-image", alt: 'Default Image' %>
+<% end %>
+
 <div class="container">
-  <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
 
   <div class="position-relative">
     <div class="card-category card-large" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)) %>)">
-      <h1 class="fw-bolder"><%= @list.name %></h1>
+      <h1 class="fw-bolder mt-3"><%= @list.name %></h1>
     </div>
 
 
@@ -35,7 +40,7 @@
                 <div>
                   <i class="fas fa-quote-left me-2"></i><small class="flex-grow-1"><%= bookmark.comment %></small>
                 </div>
-                <small class="text-right flex-shrink-0"><%= button_to "delete", bookmark_path(bookmark), method: :delete, data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove #{movie.title} from your #{@list.name} list"}, class: 'text-danger' %></small>
+                <small class="text-right flex-shrink-0"><%= button_to "delete", bookmark_path(bookmark), method: :delete, data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove #{movie.title} from your #{@list.name} list"}, class: 'btn btn-outline-danger' %></small>
               </div>
             </div>
           </div>

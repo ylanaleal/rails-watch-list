@@ -1,16 +1,9 @@
 .card {
     position: relative;
     border: 0;
-    height: 350px;
-    width: 250px;
-    .card-img-top {
-        border-radius: 25px;
-        object-fit: cover;
-        background: rgba(0, 0, 0, 0.6)
-    }
-    .card-img-top:hover {
-        opacity: 0.6;
-    }
+    height: 200px;
+    width: 350px;
+    border-radius: 15px;
     .card-name {
         font-weight: bolder;
         font-size: 20px;
@@ -19,7 +12,16 @@
         position: absolute;
         text-align: center;
         align-items: center;
-        margin-top: 170px;
+        margin-top: 90px;
         width: 100%
     }
+}
+
+.card-img {
+    object-fit: cover;
+    background: rgba(0, 0, 0, 0.6)
+}
+
+.card-img:hover {
+    opacity: 0.6;
 }
